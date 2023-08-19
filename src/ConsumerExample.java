@@ -24,3 +24,4 @@ public class ConsumerExample {
                 .forEach(System.out::println);
     }
 }
+
