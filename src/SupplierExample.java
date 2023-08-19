@@ -9,7 +9,7 @@ public class SupplierExample {
 
         // Usar o Supplier para obter uma lista com 5 saudações
         List<String> listaSaudacoes = Stream.generate(
-                () -> "Olá, seja bem-vindo(a)!")
+                        () -> "Olá, seja bem-vindo(a)!")
                 .limit(3)
                 .toList();
 

@@ -8,22 +8,19 @@ import java.util.function.Consumer;
  * retornar um valor.
  */
 public class ConsumerExample {
-  public static void main(String[] args) {
-    // Criar uma lista de números inteiros
-    List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13);
+    public static void main(String[] args) {
+        // Criar uma lista de números inteiros
+        List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13);
 
-    // Usar o Consumer com expressão lambda para imprimir números pares
-    Consumer<Integer> imprimirNumeroPar = numero -> {
-      if (numero % 2 == 0) {
-        System.out.println(numero);
-      }
-    };
+        // Usar o Consumer com expressão lambda para imprimir números pares
+        Consumer<Integer> imprimirNumeroPar = numero -> {
+            if (numero % 2 == 0) {
+                System.out.println(numero);
+            }
+        };
 
-    // Usar o Consumer para imprimir números pares no Stream
-    numeros.forEach(n -> {
-      if (n % 2 == 0) {
-        System.out.println(n);
-      }
-    });
-  }
+        // Usar o Consumer para imprimir números pares no Stream
+        numeros.stream().filter(numero -> numero % 2 == 0)
+                .forEach(System.out::println);
+    }
 }
